@@ -1,0 +1,3 @@
+#!/bin/bash -i
+rbenv exec bundle install
+rbenv exec bundle exec foreman start -f bin/Procfile.dev
