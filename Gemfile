@@ -28,6 +28,10 @@ gem 'jbuilder', '~> 2.7'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 
+gem 'jquery-rails'
+gem 'materialize-sass'
+gem 'material_icons'
+
 gem 'foreman'
 
 group :development, :test do
