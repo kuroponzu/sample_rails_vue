@@ -1,0 +1,16 @@
+version: '3'
+services:
+  db:
+    image: mysql:8.0.16
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+    volumes:
+      - mysql_data:/var/lib/mysql
+      - ./mysql-confd:/etc/mysql/conf.d #caching_sha2_passwordの対応。https://qiita.com/yensaki/items/9e453b7320ca2d0461c7
+      
+volumes: #コンテナの中でvolumeを指定する場合に、トップレベルvolumeの中でも同じものを定義する必要がある。
+  bundle_install:
+    driver: local
+  mysql_data:
+  web-sync:
+    external: true
